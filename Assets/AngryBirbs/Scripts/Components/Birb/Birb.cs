@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public class Birb : MonoBehaviour
 {
@@ -66,7 +68,17 @@ public class Birb : MonoBehaviour
 
     public void Launch(Vector3 offset, float maximumStretch, Rigidbody2D rigidbody)
     {
-        throw new System.NotImplementedException();
+        Vector3 birdForce = offset * LaunchForce * -1;
+        rigidbody.velocity = birdForce;
+        
+        
+        
+        //throw new System.NotImplementedException();
     }
+
+
+
+
+
 
 }
