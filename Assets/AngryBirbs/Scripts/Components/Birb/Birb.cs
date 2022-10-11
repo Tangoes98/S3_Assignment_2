@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 
 public class Birb : MonoBehaviour
 {
@@ -68,17 +66,13 @@ public class Birb : MonoBehaviour
 
     public void Launch(Vector3 offset, float maximumStretch, Rigidbody2D rigidbody)
     {
+        // Set a new Vector3 represent the velocity change to its rigidbody
         Vector3 birdForce = offset * LaunchForce * -1;
+
+        // apply the velocity change to the rigidbody.velocity
         rigidbody.velocity = birdForce;
         
+        ///throw new System.NotImplementedException();
         
-        
-        //throw new System.NotImplementedException();
     }
-
-
-
-
-
-
 }
