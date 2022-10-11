@@ -71,8 +71,7 @@ public class Birb : MonoBehaviour
 
         // apply the velocity change to the rigidbody.velocity
         rigidbody.velocity = birdForce;
-        
-        ///throw new System.NotImplementedException();
-        
+
+        ///throw new System.NotImplementedException();      
     }
 }

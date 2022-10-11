@@ -9,7 +9,24 @@ public class Target : MonoBehaviour
 
     private void OnCollisionEnter2D( Collision2D collision )
     {
-        throw new System.NotImplementedException();
+        // Declare the Colliding gameobject.
+        var obj = collision.gameObject;
+
+        // Get the velocity from the colliding gameobject.
+        var velocity = obj.GetComponent<Rigidbody2D>().velocity.magnitude;
+
+        // Check if the colliding object velocity is bigger than MinimumBreakSpeed or if there is a explosion radius.
+        if (velocity >= MinimumBreakSpeed || obj.GetComponent<CircleCollider2D>().radius == 2)
+        {
+            // If the statement check result is true, then run the destory target function.
+            DestroyTarget();
+        }
+        else
+        {
+            // else shows the current velocity.
+            Debug.Log(velocity);
+        }
+
     }
 
     public void DestroyTarget()

@@ -7,6 +7,14 @@ public class AirSpecialExplode : MonoBehaviour, IAirSpecial
 
     public void ExecuteAirSpecial()
     {
-        throw new System.NotImplementedException();
+        // Declare the CircleCollider of the YellowBird 
+        var collider = this.gameObject.GetComponent<CircleCollider2D>();
+
+        // When function is executed, extend circle collider radius to BlastRadius.
+        collider.radius = BlastRadius;
+
+        // Then destory the bird in 0.3 seconds.
+        Destroy(gameObject, 0.3f);
+
     }
 }
