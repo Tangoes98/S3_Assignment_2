@@ -16,11 +16,12 @@ public class AirSpecialSplit : MonoBehaviour, IAirSpecial
         var rot = Quaternion.AngleAxis(SplitAngleInDegrees, Vector3.forward);
 
 
+
         // Use for loop to generate 2 Bluebirds.
         for (int i = 0; i < airBird.Length; i++)
         {
             // Generate Bluebirds
-            airBird[i] = GameObject.Instantiate<GameObject>(splitBirds);
+            airBird[i] = Birb.MakeBirbCopy(splitBirds);
 
             // Set the Rigidbody simulation to True so it has physics.
             airBird[i].GetComponent<Rigidbody2D>().simulated = true;

@@ -71,5 +71,7 @@ public class Birb : MonoBehaviour
 
         // apply the velocity change to the rigidbody.velocity
         rigidbody.velocity = birdForce;
+
+        Debug.Log(rigidbody.velocity.magnitude);
     }
 }
