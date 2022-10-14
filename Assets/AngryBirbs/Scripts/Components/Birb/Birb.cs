@@ -65,10 +65,6 @@ public class Birb : MonoBehaviour
     [Range( 0, 25 )]
     public float LaunchForce = 12;
 
-
-
-
-
     public void Launch(Vector3 offset, float maximumStretch, Rigidbody2D rigidbody)
     {
         // Set a new Vector3 represent the velocity change to its rigidbody
@@ -77,17 +73,7 @@ public class Birb : MonoBehaviour
         // apply the velocity change to the rigidbody.velocity
         rigidbody.velocity = birdForce;
 
-        Debug.Log(rigidbody.velocity.magnitude);
-
-
-        var sp = rigidbody.velocity.magnitude;
-
-        GameObject.Find("Target").GetComponent<Target>().velocityOnCollison = sp;
-
-        GameObject.Find("MovingTarget").GetComponent<Target>().velocityOnCollison = sp;
-
-
-
+        Debug.Log("Start Speed: " + rigidbody.velocity.magnitude);
     }
 
 

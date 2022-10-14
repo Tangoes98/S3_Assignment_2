@@ -133,6 +133,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LaunchForce: 12
+  _target: {fileID: 1653465181420740, guid: 6b70f04abe8325745abb2036f34456a1, type: 3}
+  _moveTarget: {fileID: 1653465181420740, guid: 84668bffb41a06048beb2d467711ed8a,
+    type: 3}
 --- !u!114 &114548580392157666
 MonoBehaviour:
   m_ObjectHideFlags: 0
