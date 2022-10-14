@@ -15,8 +15,6 @@ public class AirSpecialSplit : MonoBehaviour, IAirSpecial
         // Set the rotation value based on Z axis.
         var rot = Quaternion.AngleAxis(SplitAngleInDegrees, Vector3.forward);
 
-
-
         // Use for loop to generate 2 Bluebirds.
         for (int i = 0; i < airBird.Length; i++)
         {
