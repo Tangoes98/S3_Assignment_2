@@ -12,8 +12,10 @@ public class Target : MonoBehaviour
         // Declare the Colliding gameobject.
         var obj = collision.gameObject;
 
-        // Get the velocity from the colliding gameobject.
-        var velocity = obj.GetComponent<Rigidbody2D>().velocity.magnitude;
+        // Get the relative velocity from the colliding gameobject.
+        var velocity = collision.relativeVelocity.magnitude;
+
+
 
         // Check if the colliding object velocity is bigger than MinimumBreakSpeed or if there is a explosion radius.
         if (velocity >= MinimumBreakSpeed || obj.GetComponent<CircleCollider2D>().radius == 2)
